@@ -1,3 +1,5 @@
+#include "chatlogic.h"
+
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -7,7 +9,6 @@
 #include <vector>
 
 #include "chatbot.h"
-#include "chatlogic.h"
 #include "graphedge.h"
 #include "graphnode.h"
 
@@ -171,7 +172,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
                   });
 
               // create new edge
-              std::unique_ptr<GraphEdge> edge = std::make_unique<GraphEdge>(id);
+              auto edge = std::make_unique<GraphEdge>(id);
               edge->SetChildNode((*childNode).get());
               edge->SetParentNode((*parentNode).get());
 
@@ -208,7 +209,6 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename) {
   for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it) {
     // search for nodes which have no incoming edges
     if ((*it)->GetNumberOfParents() == 0) {
-
       if (rootNode == nullptr) {
         rootNode = it.base()->get(); // assign current node to root
       } else {

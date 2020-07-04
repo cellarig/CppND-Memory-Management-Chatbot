@@ -1,8 +1,9 @@
 #ifndef CHATBOT_H_
 #define CHATBOT_H_
 
-#include <string>
 #include <wx/bitmap.h>
+
+#include <string>
 
 class GraphNode; // forward declaration
 class ChatLogic; // forward declaration

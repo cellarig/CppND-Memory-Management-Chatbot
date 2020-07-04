@@ -1,9 +1,10 @@
 #ifndef CHATLOGIC_H_
 #define CHATLOGIC_H_
 
-#include "chatgui.h"
 #include <string>
 #include <vector>
+
+#include "chatgui.h"
 
 // forward declarations
 class ChatBot;

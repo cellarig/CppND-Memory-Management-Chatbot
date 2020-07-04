@@ -1,9 +1,10 @@
+#include "chatbot.h"
+
 #include <algorithm>
 #include <ctime>
 #include <iostream>
 #include <random>
 
-#include "chatbot.h"
 #include "chatlogic.h"
 #include "graphedge.h"
 #include "graphnode.h"

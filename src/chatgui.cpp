@@ -1,10 +1,13 @@
 #include "chatgui.h"
-#include "chatbot.h"
-#include "chatlogic.h"
-#include <string>
+
 #include <wx/colour.h>
 #include <wx/filename.h>
 #include <wx/image.h>
+
+#include <string>
+
+#include "chatbot.h"
+#include "chatlogic.h"
 
 // size of chatbot window
 const int width = 414;
